@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script><link rel="stylesheet" href="./style.css">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- USER RATING STYLE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+    .heading {
+      font-size: 30px;
+      margin-right: 25px;
+    }
+
+    .fa {
+      font-size: 25px;
+    }
+
+    .checked {
+      color: orange;
+    }
+
+    /* Three column layout */
+    .side {
+      float: left;
+      width: 15%;
+      margin-top:10px;
+    }
+
+    .middle {
+      margin-top:10px;
+      float: left;
+      width: 70%;
+    }
+
+    /* Place text to the right */
+    .right {
+      text-align: right;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* The bar container */
+    .bar-container {
+      width: 100%;
+      background-color: #f1f1f1;
+      text-align: center;
+      color: white;
+    }
+
+    /* Individual bars */
+    .bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+    .bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+    .bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+    .bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+    .bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+    /* Responsive layout - make the columns stack on top of each other instead of next to each other */
+    @media (max-width: 400px) {
+      .side, .middle {
+        width: 100%;
+      }
+      .right {
+        display: none;
+      }
+    }
+    </style>
+    <!-- USER RATING STYLE ENDS -->
+  <title >Shoppy | Electronics</title>
+  </head>
+  <body>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="Index.html">Shoppy</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <div class="btn-group dropdown">
+                  <a class="btn btn-info " href="Fashion.html" role="button">
+                    Fashion
+                  </a>
+                  <button type="button" class="btn btn-sm btn-info dropdown-toggle dropdown-toggle-split me-2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropright</span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <!-- Dropdown menu links -->
+                    <li><a class="dropdown-item" href="Fashion.html#first">Men</a></li>
+                      <li><a class="dropdown-item" href="Fashion.html#second">Women</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="Fashion.html#third">Children</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group dropdown">
+                  <a class="btn btn-success" href="Grocery.html" role="button">
+                    Grocery
+                  </a>
+                  <button type="button" class="btn btn-sm btn-success dropdown-toggle dropdown-toggle-split me-2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropright</span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <!-- Dropdown menu links -->
+                      <li><a class="dropdown-item" href="Grocery.html#gf">Snacks and Beverage</a></li>
+                      <li><a class="dropdown-item" href="Grocery.html#gs">Packaged Food</a></li>
+                      <li><a class="dropdown-item" href="Grocery.html#gt">Dairy Products</a></li>
+                  </ul>
+                </div>
+                
+                <div class="btn-group dropdown">
+                  <a class="btn btn-warning" href="#" role="button">
+                    Electronics
+                  </a>
+                  <button type="button" class="btn btn-sm btn-warning dropdown-toggle dropdown-toggle-split me-2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropright</span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <!-- Dropdown menu links -->
+                      <li><a class="dropdown-item" href="#ef">Laptop & Accessories</a></li>
+                      <li><a class="dropdown-item" href="#es">Camera & Accessories</a></li>
+                      <li><a class="dropdown-item" href="#et">Gaming</a></li>
+                  </ul>
+                </div>
+            <li class="nav-item">
+              <a class="btn btn-dark" aria-current="page" href="Mobile.html" role="button">Mobile</a>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn btn-primary ms-2 me-1" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button>
+              <button class="clear-cart btn btn-danger">Clear Cart</button>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar Ends -->
+    <!-- Cart -->
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="show-cart table">
+              
+            </table>
+            <div>Total price: ₹<span class="total-cart"></span></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="buy-now clear-cart btn btn-primary">Order now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cart ends -->
+        <!-- Main Content -->
+        <div>
+            <h1 class="ms-3 mt-3 mb-3 fw-bold text-center" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> ELECTRONICS </h1>
+
+            <!-- Card1 -->
+            <section id="ef">
+            <div class="card mb-3 ms-3 me-3 mt-3" >
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="./images/E_1M.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h2 class="card-title">Hp Laptop</h2>
+                      <p class="card-text">Processor: 10th Gen Intel Core i3-10110U (2.1 GHz base frequency, up to 4.1 GHz with Intel Turbo Boost Technology, 4 MB L3 cache, 2 cores)
+                        Memory: 8 GB DDR4-2666 MHz RAM (1 x 8 GB), Upgradable upto 16GB | Storage: 1 TB 5400 rpm SATA HDD, M.2 Slot available
+                        Display: 39.6 cm (15.6") diagonal, FHD (1920 x 1080), micro-edge, anti-glare, 220 nits, 45% NTSC
+                        Graphics: Intel UHD Graphics
+                        Operating System & Pre-installed Software: Pre-loaded Windows 10 Home with lifetime validity, FREE Upgrade to Windows 11* (when available, refer product description for more details) | Microsoft Office Home & Student 2019</p>
+                      <p class="card-text"><small class="text-muted">Few Left!!! Hurry Up</small></p>
+                      <!-- User rating div -->
+                      <div>
+                        <span class="heading">User Rating</span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <p>4.1 average based on 254 reviews.</p>
+                        <hr style="border:3px solid #f1f1f1">
+                      </div>
+                      <!-- User Rating div ends -->
+                      <h3 class="fs-2 fw-bold font-monospace mb-3 ms-2">₹50999</h3>
+                      <!-- Buttons -->
+                      <div>
+                        <a href="#" data-name="Hp_Laptop" data-price="50999" class="add-to-cart btn btn-primary">Add to Cart</a>
+                        <button type="button" class="buy-now btn btn-success">Buy Now</button>
+                      </div>
+                      <!-- Buttons end -->
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </section>
+            <!-- Card1 end -->
+            <!-- Card2 -->
+            <section id="es">
+            <div class="card mb-3 ms-3 me-3 mt-3" >
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="./images/E_2M.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h2 class="card-title">Hp Laptop</h2>
+                      <p class="card-text">Resolution and Frame rate: Max. 1280 x 720P, Max. 30Fps | Focus type: fixed
+                        Microphone: Single digital mic
+                        Compatible with Windows XP (SP2, SP3), Vista, 7, 8, 10, Mac OS X 10.6 or higher
+                        Plug and Play: No drivers needed, just plug the webcam via the USB port into the computer
+                        Video Calling: Get quality video streams on Zoom/Skype/Facebook Messenger/YouTube/WhatsApp/Google Hangouts/Line/Viber/WeChat
+                        Tripod Support: Yes
+                        In the Box: Webcam, USB 2.0 Type-A Connector</p>
+                      <p class="card-text"><small class="text-muted">Few Left!!! Hurry Up</small></p>
+                      <!-- User rating div -->
+                      <div>
+                        <span class="heading">User Rating</span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <p>4.1 average based on 254 reviews.</p>
+                        <hr style="border:3px solid #f1f1f1">
+                      </div>
+                      <!-- User Rating div ends -->
+                      <h3 class="fs-2 fw-bold font-monospace mb-3 ms-2">₹2399</h3>
+                      <!-- Buttons -->
+                      <div>
+                        <a href="#" data-name="Hp_Webcam" data-price="2399" class="add-to-cart btn btn-primary">Add to Cart</a>
+                        <button type="button" class="buy-now btn btn-success">Buy Now</button>
+                      </div>
+                      <!-- Buttons end -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+              <!-- Card2 Ends -->
+              <!-- Card3 -->
+              <section id="et">
+            <div class="card mb-3 ms-3 me-3 mt-3" >
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="./images/E_3M.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h2 class="card-title">Sovawm Gaming Headphone</h2>
+                    <p class="card-text">It’s time to hit your gaming zone with the 7.1 channel virtual surround sound gaming headphones,
+                      It comes equipped with intelligent denoising mic and ENx technology that delivers your voice unhindered so that your squad and you stay in tune irrespective of the geographical distance
+                      It’s here to captivate you with the 50mm drivers immersive experience while you conquer different levels or missions
+                      Set your surrounding vibes the perfect boAthead way, courtesy the RGB Breathing LEDs
+                      You can easily customize the audio & mic drivers settings
+                      Its lightweight, over-ear industrial design accompanies with super soft earmuffs that offer a cosy listening time
+                      It is a USB Gaming Headphones exclusively only for PC that also has a securely braided cable for a hassle-free extended usage</p>
+                    <p class="card-text"><small class="text-muted">Few Left!!! Hurry Up</small></p>
+                    <!-- User rating div -->
+                    <div>
+                      <span class="heading">User Rating</span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <p>4.1 average based on 254 reviews.</p>
+                      <hr style="border:3px solid #f1f1f1">
+                    </div>
+                    <!-- User Rating div ends -->
+                    <h3 class="fs-2 fw-bold font-monospace mb-3 ms-2">₹1099</h3>
+                    <!-- Buttons -->
+                    <div>
+                      <a href="#" data-name="Gaming_Headphone" data-price="1099" class="add-to-cart btn btn-primary">Add to Cart</a>
+                      <button type="button" class="buy-now btn btn-success">Buy Now</button>
+                    </div>
+                    <!-- Buttons end -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+            <!-- Card3 Ends -->
+
+        </div>
+        <!-- Main Content ends -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>    <script src="script.js"></script>
+  </body>
+</html>
